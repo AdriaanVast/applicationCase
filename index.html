@@ -5,40 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/index.css">
 
     <title>Adyen application</title>
 </head>
 <body>
-<div class="container mt-5 mb-5">
+
+<input type="text" id="userLocation" hidden>
+<input type="text" id="chosenSection" hidden>
+<input type="text" id="chosenPrice" hidden>
+
+<div class="container mt-5 border border-light rounded pg-main-container">
+
     <div class="row">
 
         <div class="col mt-5">
-            <h2>What are you looking for?</h2>
+            <h2 id="selection-title">What are you looking for?</h2>
         </div>
 
     </div>
 
-    <div class="row mt-5 ml-5" id="category-selection">
+    <div class="row mt-5 ml-5" id="selection-row-1">
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg">Food</button>
+            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-1" name="section"
+                    value="food" id="Food">Food
+            </button>
         </div>
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg">Drinks</button>
+            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-1" name="section"
+                    value="coffee" id="Coffee">Coffee
+            </button>
         </div>
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg">Coffee</button>
-        </div>
-
-        <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg">Parties</button>
+            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-1" name="section"
+                    value="drinks" id="Drinks">Drinks
+            </button>
         </div>
 
     </div>
 
-    <div class="row mt-4 ml-5" id="location-selection">
+    <div class="row mt-5 ml-5" id="selection-row-2" hidden>
+
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="price"
+                    value="1" id="Affordable">Affordable
+            </button>
+        </div>
+
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="price"
+                    value="2" id="Average">Average
+            </button>
+        </div>
+
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="high-end"
+                    value="3,4" id="Pricey">Pricey
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="row mt-4 ml-5 mb-3" id="location-selection-row">
 
         <div class="col-6">
             <div class="input-group">
@@ -51,6 +83,14 @@
         </div>
 
     </div>
+
+    <div class="row mt-5 ml-1" id="selected-items-title">
+        <h3>Current selection</h3>
+    </div>
+
+    <div class="row mt-2 ml-5 mb-2" id="selected-items-row">
+    </div>
+
 </div>
 
 <script src="scripts/jquery-3.3.1.min.js"></script>
