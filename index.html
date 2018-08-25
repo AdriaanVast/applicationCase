@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
     <title>Adyen application</title>
 </head>
 <body>
+<div class="container mt-5 mb-5">
+    <div class="row">
 
+        <div class="col mt-5">
+            <h2>What are you looking for?</h2>
+        </div>
+
+    </div>
+
+    <div class="row mt-5 ml-5" id="category-selection">
+
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-primary btn-lg">Food</button>
+        </div>
+
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-primary btn-lg">Drinks</button>
+        </div>
+
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-primary btn-lg">Coffee</button>
+        </div>
+
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-primary btn-lg">Parties</button>
+        </div>
+
+    </div>
+
+    <div class="row mt-4 ml-5" id="location-selection">
+
+        <div class="col-6">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="location-input-descriptor">Location</span>
+                </div>
+                <input type="text" class="form-control" id="location-input-field"
+                       aria-describedby="location-input-descriptor">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/popper.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/index.js"></script>
 </body>
 </html>
