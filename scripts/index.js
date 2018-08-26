@@ -35,7 +35,7 @@ function resetSearch() {
     $('.pg-selection').attr('hidden', true);
     $('.pg-selection-1').attr('hidden', false);
     $('#location-input-field').val('');
-    if($('#userLocation').val() === ''){
+    if ($('#userLocation').val() === '') {
         locationSet = false;
     }
 }
@@ -137,7 +137,7 @@ function foursquareExploreQuery() {
 function buildExploreQueryURL() {
     let baseURL = 'https://api.foursquare.com/v2/venues/explore?';
     let result;
-    let resultLimit = 9;
+    let resultLimit = 6;
     let locationInputValue = $('#location-input-field').val();
     if (locationInputValue !== '') {
         result = baseURL + 'near=' + locationInputValue;
@@ -168,7 +168,7 @@ function parseResultData(jsonData) {
             '</div>'
         )
     } else {
-       resultsHeader.html(
+        resultsHeader.html(
             '<h2>Results found in ' + jsonData.response.headerFullLocation + '</h2>'
         );
 
