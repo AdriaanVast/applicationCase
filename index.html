@@ -15,17 +15,32 @@
 <input type="text" id="chosenSection" hidden>
 <input type="text" id="chosenPrice" hidden>
 
-<div class="container mt-5 border border-light rounded pg-main-container">
+<div class="container mt-5 border secondary rounded pg-main-container">
 
-    <div class="row">
+    <div class="row ml-2 mt-5">
 
-        <div class="col mt-5">
-            <h2 id="selection-title">What are you looking for?</h2>
+        <div class="col selection-1">
+            <h2>What are you looking for?</h2>
+        </div>
+
+        <div class="col selection-2" hidden>
+            <h2>In what price range?</h2>
+        </div>
+
+        <div class="col selection-3" hidden>
+            <h2>What city would you like to look in?</h2>
         </div>
 
     </div>
 
-    <div class="row mt-5 ml-5" id="selection-row-1">
+    <div class="row ml-2">
+
+        <div class="col" id="alert-display-col">
+        </div>
+
+    </div>
+
+    <div class="row mt-3 ml-2 selection-1" id="selection-row-1">
 
         <div class="col-2">
             <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-1" name="section"
@@ -47,7 +62,7 @@
 
     </div>
 
-    <div class="row mt-5 ml-5" id="selection-row-2" hidden>
+    <div class="row mt-3 ml-2 selection-2" id="selection-row-2" hidden>
 
         <div class="col-2">
             <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="price"
@@ -62,15 +77,14 @@
         </div>
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="high-end"
+            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="price"
                     value="3,4" id="Pricey">Pricey
             </button>
         </div>
 
     </div>
 
-
-    <div class="row mt-4 ml-5 mb-3" id="location-selection-row">
+    <div class="row mt-3 ml-2 selection-3" id="selection-row-3" hidden>
 
         <div class="col-6">
             <div class="input-group">
@@ -82,13 +96,23 @@
             </div>
         </div>
 
+        <div class="col-1">
+            <button type="button" class="btn btn-primary" id="confirm-search-button">Search</button>
+        </div>
+
     </div>
 
-    <div class="row mt-5 ml-1" id="selected-items-title">
-        <h3>Current selection</h3>
+    <div class="row mt-5 ml-2" id="selected-items-title">
+        <div class="col">
+            <h3>Current selection</h3>
+        </div>
     </div>
 
-    <div class="row mt-2 ml-5 mb-2" id="selected-items-row">
+    <div class="row mt-2 ml-2 mb-2" id="selected-items-row">
+    </div>
+
+    <div class="row mt-5 ml-2" id="foursquare-results-row">
+        
     </div>
 
 </div>
