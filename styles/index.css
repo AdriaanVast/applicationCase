@@ -3,5 +3,6 @@ body {
 }
 
 .pg-main-container {
+    min-width: 900px;
     background-color: #ffffff;
 }

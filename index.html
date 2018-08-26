@@ -16,75 +16,77 @@
 <input type="text" id="chosenPrice" hidden>
 
 <div class="container mt-5 border secondary rounded pg-main-container">
-
+    <!--Row containing the headers for each selection step-->
     <div class="row ml-2 mt-5">
 
-        <div class="col selection-1">
+        <div class="col pg-selection pg-selection-1">
             <h2>What are you looking for?</h2>
         </div>
 
-        <div class="col selection-2" hidden>
+        <div class="col pg-selection pg-selection-2" hidden>
             <h2>In what price range?</h2>
         </div>
 
-        <div class="col selection-3" hidden>
+        <div class="col pg-selection pg-selection-3" hidden>
             <h2>What city would you like to look in?</h2>
         </div>
 
     </div>
-
+    <!--Location related errors are displayed here-->
     <div class="row ml-2">
 
-        <div class="col" id="alert-display-col">
+        <div class="col" id="location-alert-display-col">
         </div>
 
     </div>
 
-    <div class="row mt-3 ml-2 selection-1" id="selection-row-1">
+    <!--Row containing the first step in the process, selecting a category of venues to look for-->
+    <div class="row mt-3 ml-2 pg-selection pg-selection-1" id="pg-selection-row-1">
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-1" name="section"
+            <button type="button" class="btn btn-outline-primary btn-lg pg-selection-button choice-1" name="section"
                     value="food" id="Food">Food
             </button>
         </div>
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-1" name="section"
+            <button type="button" class="btn btn-outline-primary btn-lg pg-selection-button choice-1" name="section"
                     value="coffee" id="Coffee">Coffee
             </button>
         </div>
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-1" name="section"
+            <button type="button" class="btn btn-outline-primary btn-lg pg-selection-button choice-1" name="section"
                     value="drinks" id="Drinks">Drinks
             </button>
         </div>
 
     </div>
 
-    <div class="row mt-3 ml-2 selection-2" id="selection-row-2" hidden>
+    <!--Row containing the second step in the process, selecting a price category to look within-->
+    <div class="row mt-3 ml-2 pg-selection pg-selection-2" id="pg-selection-row-2" hidden>
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="price"
+            <button type="button" class="btn btn-outline-primary btn-lg pg-selection-button choice-2" name="price"
                     value="1" id="Affordable">Affordable
             </button>
         </div>
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="price"
+            <button type="button" class="btn btn-outline-primary btn-lg pg-selection-button choice-2" name="price"
                     value="2" id="Average">Average
             </button>
         </div>
 
         <div class="col-2">
-            <button type="button" class="btn btn-outline-primary btn-lg selection-button choice-2" name="price"
+            <button type="button" class="btn btn-outline-primary btn-lg pg-selection-button choice-2" name="price"
                     value="3,4" id="Pricey">Pricey
             </button>
         </div>
 
     </div>
-
-    <div class="row mt-3 ml-2 selection-3" id="selection-row-3" hidden>
+    <!--Row containing the final step in the process, selecting a location to search in-->
+    <div class="row mt-3 ml-2 pg-selection pg-selection-3" id="pg-selection-row-3" hidden>
 
         <div class="col-6">
             <div class="input-group">
@@ -101,18 +103,27 @@
         </div>
 
     </div>
-
-    <div class="row mt-5 ml-2" id="selected-items-title">
-        <div class="col">
+    <!--The header for the selected items-->
+    <div class="row mt-5 ml-2">
+        <div class="col-3">
             <h3>Current selection</h3>
+        </div>
+        <div class="col-1">
+            <button type="button" class="btn btn-primary disabled" id="reset-search-button">Reset</button>
         </div>
     </div>
 
+    <!--The row containing the items the user has selected-->
     <div class="row mt-2 ml-2 mb-2" id="selected-items-row">
     </div>
 
-    <div class="row mt-5 ml-2" id="foursquare-results-row">
-        
+
+    <div class="row mt-5 ml-2" >
+        <div class="col" id="foursquare-results-header">
+        </div>
+    </div>
+
+    <div class="row mt-2 ml-2" id="foursquare-results-row">
     </div>
 
 </div>
