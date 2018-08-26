@@ -186,7 +186,7 @@ function displayVenueInformation(jsonData) {
             '   <img class="card-img-top pg-card-image" src="' + jsonData.response.venue.bestPhoto.prefix + '600x600' +
             jsonData.response.venue.bestPhoto.suffix + '" alt="Card image cap">' +
             '    <div class="card">' +
-            '        <div class="card-body">' +
+            '        <div class="card-body bg-light">' +
             '            <h5 class="card-title">' + jsonData.response.venue.name + '</h5>' +
             '            <p class="card-text">Category: ' + jsonData.response.venue.categories[0].name + '</p><p></p>' +
             '            <a href="' + jsonData.response.venue.url + '" class="btn btn-primary" target="_blank">Go to site</a>' +
